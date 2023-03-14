@@ -28,13 +28,13 @@ function distanceFromHqInBlocks(blocks) {
     const distanceInFeet = distanceTravelledInFeet(start, destination);
     let farePrice;
   
-    if (distanceInFeet <= 400) {
+    if (distanceInFeet <401) {
       farePrice = 0;
-    } else if (distanceInFeet > 400 && distanceInFeet <= 2000) {
+    } else if (distanceInFeet > 400 && distanceInFeet < 2001) {
       farePrice = (distanceInFeet - 400) * 0.02;
-    } else if (distanceInFeet > 2000 && distanceInFeet <= 2500) {
+    } else if (distanceInFeet > 2000 && distanceInFeet < 2501) {
       farePrice = 25;
-    } else {
+    } else if(distanceInFeet>2500) {
       farePrice = 'cannot travel that far';
     }
   
